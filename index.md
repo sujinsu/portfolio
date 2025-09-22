@@ -1,17 +1,35 @@
-﻿# 백엔드 포트폴리오
+﻿---
+layout: home
+hero:
+  name: "LEE SUJIN"
+  text: "Backend Developer "
+  tagline: " 3.5년차 개발자 \n Java · Spring · Docker · K8s · Auth (SAML SSO) · Kafka/Redis · CICD"
+  image:
+    src: /avatar.png      
+    alt: "SuJin"
+  actions:
+    - theme: brand
+      text: View Projects
+      link: /projects/
+    - theme: alt
+      text: Resume (PDF)
+      link: /resume
+features:
+  - icon: 🔐
+    title: 인증/인가
+    details: SAML SSO, JWT/RBAC 설계·운영
+    link: /focus/auth
+  - icon: 📬
+    title: 메시징/비동기
+    details: Kafka 병렬 Consumer, 재시도·DLT
+    link: /focus/messaging
+  - icon: ⚡
+    title: 성능/안정성
+    details: JMeter, 캐시·서킷·레이트리밋
+    link: /focus/performance
+  - icon: 🚀
+    title: DevOps
+    details: Docker/K8s, Jenkins/Helm, 관측 지표
+    link: /focus/devops
+---
 
-**Java/Spring Boot** 기반 백엔드 개발자 (3년 6개월).  
-MSA · 인증/인가(SAML/JWT) · Kafka/Redis · Docker/K8s · CI/CD/모니터링 환경에서 **문제해결 중심**으로 일했습니다.
-
-## 대표 프로젝트(하이라이트)
-- **Auth Gateway/Bard** — 게이트웨이 정책 서버 개발, **IP 화이트/블랙리스트·라우팅·캐시/리프레시**, JMeter 성능 시나리오 제작 및 전파
-- **그룹 공동 생성형 AI 플랫폼** — **SAML SSO + Kafka 비동기 알림** · Redis+ShedLock 분산락, 외부 SaaS 연동, Jenkins/Helm 운영
-- **LLM RAG Demo** — Java 중계 API + **Python/LangChain + Elasticsearch 하이브리드 검색(RRF)**, 지식 색인/검색 파이프라인
-
-👉 자세히: [Projects](/projects/) · [About](/about) · [Resume](/resume)
-
-
-- 👉 [Projects](/projects/)
-- 👉 [Blog](/blog/first-post)
-- 👉 [About](/about)
-- 👉 [Resume](/resume)

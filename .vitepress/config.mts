@@ -1,7 +1,9 @@
 ﻿import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid';
+
 export default defineConfig({
-  title: 'Backend Portfolio',
-  description: 'Java/Spring Boot · Kafka · Redis · K8s · Docker · SAML · CI/CD',
+  title: 'LEE SUJIN',
+  description: 'Java/Spring Boot ·  K8s · Docker · Kafka · Redis · SAML · CI/CD',
   base: '/portfolio/',
   markdown: { mermaid: true },
   themeConfig: {
@@ -19,11 +21,10 @@ export default defineConfig({
         { text: '데이터 전처리 연구', link: '/projects/data-prep' },
         { text: 'RHEA 2.0', link: '/projects/rhea' },
         { text: 'LLM RAG Demo', link: '/projects/rag-demo' },
-        { text: 'MSPP', link: '/projects/mspp' },
         { text: '그룹 공동 생성형 AI', link: '/projects/group-genai' }
       ]
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/<your-id>' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/sujinsu' }],
     search: { provider: 'local' },
     outline: [2,3]
   }

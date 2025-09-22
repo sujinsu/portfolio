@@ -1,0 +1,223 @@
+/* =========================================================
+   Lee Sujin Portfolio — VitePress Custom Theme Styles
+   Palette: Periwinkle (의상 톤)
+   ========================================================= */
+
+/* ---------- Palette / Tokens ---------- */
+:root{
+  /* Brand */
+  --brand:        #6E5CD6; /* 메인 */
+  --brand-dark:   #4F43AD; /* 딥 */
+  --brand-light:  #ECEBFF; /* 라이트 배경 */
+  --brand-soft:   #B8B0F2; /* 보조 */
+
+  /* VitePress brand vars 연결 */
+  --vp-c-brand-1: var(--brand);
+  --vp-c-brand-2: var(--brand-dark);
+  --vp-c-brand-3: var(--brand-soft);
+
+  /* Surfaces */
+  --surface-soft: #FFFFFF;
+  --surface-alt:  #FAF9FF;
+
+  /* Cards */
+  --card-bg: var(--surface-soft);
+  --card-br: 16px;
+
+  /* Nav/Sidebar 공통 배경/보더 (여기만 바꾸면 둘 다 바뀜) */
+  --nav-bg:     #e8e4ff;               /* 상단 네비 & 사이드바 배경색 */
+  --nav-border: rgba(79,67,173,.18);   /* 보더색 */
+}
+
+/* 페이지 컨테이너 폭(안정감) */
+.VPContent .container,
+.VPHome .container { max-width: 1040px; }
+
+/* =========================================================
+   NAVBAR / SIDEBAR
+   ========================================================= */
+
+/* 상단 네비(배경/보더 공통 변수 사용) */
+.VPNavBar{
+  position: sticky; top: 0; z-index: 20;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+/* 타이틀/링크 컬러 */
+.VPNavBar .title { color:#fff; font-weight:800; }
+.VPNavBar .menu .item .link{ color:#1e1e1e; font-weight:600; }
+.VPNavBar .menu .item .link:hover,
+.VPNavBar .menu .item .link.active{ color: var(--brand-dark); }
+
+/* 네비 오른쪽 여백 살짝 */
+.VPNavBar.has-sidebar .container{ max-width: 1240px; }
+
+/* 다크 모드 */
+.dark .VPNavBar{
+  background: #151726;
+  border-bottom-color: rgba(255,255,255,.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,.4);
+}
+
+/* (요청으로 제거) 네비 하단 포인트 라인 비활성화 */
+.VPNavBar::after,
+.dark .VPNavBar::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ===== Sidebar (네비와 동일 배경/보더 적용) ===== */
+.VPSidebar{
+  background: var(--nav-bg) !important;
+  border-right: 1px solid var(--nav-border) !important;
+}
+
+/* ⚠️ 내부 레이어까지 배경을 덮어써서 완전히 동일하게 */
+.VPSidebar,
+.VPSidebar > .container,
+.VPSidebar > .container > .content,
+.VPSidebar .curtain,
+.VPSidebar .group,
+.VPSidebar .items,
+.VPSidebar .outline,
+.VPSidebar .nav,
+.VPSidebar .content{
+  background: var(--nav-bg) !important;
+}
+
+/* 텍스트 컬러 유지 */
+.VPSidebar .group .title { color: var(--brand-dark) !important; }
+.VPSidebar .link.active .text { color: var(--brand) !important; font-weight:700; }
+
+/* 다크 모드에서 사이드바도 동일하게 */
+.dark .VPSidebar,
+.dark .VPSidebar > .container,
+.dark .VPSidebar > .container > .content,
+.dark .VPSidebar .curtain,
+.dark .VPSidebar .group,
+.dark .VPSidebar .items,
+.dark .VPSidebar .outline,
+.dark .VPSidebar .nav,
+.dark .VPSidebar .content{
+  background: #151726 !important;
+}
+.dark .VPSidebar{
+  border-right-color: rgba(255,255,255,.08) !important;
+}
+
+/* =========================================================
+   HOME (Hero)
+   ========================================================= */
+
+.VPHero .name{
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--brand);
+}
+.VPHero .text{
+  font-size: clamp(20px, 3.2vw, 36px);
+  line-height: 1.15;
+}
+.VPHero .tagline{
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: var(--vp-c-text-2);
+}
+
+/* Hero 여백 */
+.VPHero .container .main{
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+/* 둥근 버튼(귀엽게) */
+.VPHero .VPButton.brand,
+.VPHero .VPButton.alt{
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 700;
+}
+
+/* 프로필 이미지(원형) */
+.VPHero .image img{
+  width: 180px; height: 180px; object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--vp-c-brand-1);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+@media (max-width: 640px){
+  .VPHero .image img{ width: 88px; height: 88px; }
+}
+
+/* =========================================================
+   PROJECTS GRID / CARDS
+   ========================================================= */
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap:18px;
+  margin: 18px 0 8px;
+}
+.card{
+  display:block;
+  padding:18px 20px;
+  background: var(--card-bg);
+  border:1px solid var(--vp-c-divider);
+  border-radius: var(--card-br);
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+}
+/* 카드 밑줄 제거(자식까지 완전 제거) */
+.grid .card,
+.grid .card *{
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.grid .card a{ color: inherit; text-decoration: none !important; }
+.grid .card a:hover{ color: var(--vp-c-brand-1); text-decoration: none !important; }
+
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  border-color: var(--vp-c-brand-1);
+}
+.card h3{ margin:0 0 8px; font-weight:800; line-height:1.2; font-size:18px; }
+.card p { margin:0 0 10px; color: var(--vp-c-text-2); font-size:14px; }
+.tags   { font-size:12px; color: var(--vp-c-text-2); }
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.VPDoc h1{ font-weight:800; }
+.VPDoc p strong{ color: var(--vp-c-brand-2); }
+
+/* ---------------------------------------------------------
+   (Optional accents you may use in docs)
+   --------------------------------------------------------- */
+.pill{
+  display:inline-block; padding:4px 10px; border-radius:999px;
+  background: var(--brand-light); color: var(--brand-dark);
+  font-weight:600; font-size:12px;
+}
+hr.dots{
+  border:0; height:1px;
+  background: radial-gradient(currentColor 1px, transparent 1px) repeat-x 0 0/8px 1px;
+  color: rgba(110,92,214,.35); margin: 16px 0;
+}
+.caption{
+  font-size:13px; color:var(--vp-c-text-2); background:#FBFAFF;
+  border:1px dashed rgba(110,92,214,.25);
+  padding:10px 12px; border-radius:12px;
+}
+
+/* 코드블록 상단 라벨 */
+.pre-label{
+  display:inline-block; background: var(--brand-light); color:var(--brand-dark);
+  font-size:12px; font-weight:700; padding:4px 8px; border-radius:8px; margin:6px 0;
+}
