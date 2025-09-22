@@ -25,7 +25,7 @@
   --card-br: 16px;
 
   /* Nav/Sidebar 공통 배경/보더 (여기만 바꾸면 둘 다 바뀜) */
-  --nav-bg:     #e8e4ff;               /* 상단 네비 & 사이드바 배경색 */
+  --nav-bg:     #c8bdfc;               /* 상단 네비 & 사이드바 배경색 : 기존 연한 색 - #e8e4ff > #d7d0ff > #cec5ff > #c8bdfc */
   --nav-border: rgba(79,67,173,.18);   /* 보더색 */
 }
 
@@ -85,6 +85,31 @@
 .VPSidebar .nav,
 .VPSidebar .content{
   background: var(--nav-bg) !important;
+}
+
+/* VitePress가 스크롤 시 투명으로 만드는 영역까지 전부 강제 */
+.VPNavBar,
+.VPNavBar .content,
+.VPNavBar .content > .container {
+  background: var(--nav-bg) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* 레이아웃/시각 보강 */
+.VPNavBar{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+/* 다크모드도 고정색 쓰고 싶으면 여기 조정 */
+.dark .VPNavBar,
+.dark .VPNavBar .content,
+.dark .VPNavBar .content > .container {
+  background: #151726 !important;   /* 다크 전용 색 */
 }
 
 /* 텍스트 컬러 유지 */
@@ -221,3 +246,41 @@ hr.dots{
   display:inline-block; background: var(--brand-light); color:var(--brand-dark);
   font-size:12px; font-weight:700; padding:4px 8px; border-radius:8px; margin:6px 0;
 }
+
+.btn {
+  display:inline-block; padding:10px 14px; border-radius:10px;
+  font-weight:700; text-decoration:none; border:1px solid var(--brand);
+  background:#fff; color:var(--brand-dark);
+}
+.btn.brand { background: var(--brand); color:#fff; border-color: var(--brand); }
+.btn + .btn { margin-left:8px; }
+
+/* 문서 안 공용 버튼 */
+.actions {
+  display:flex; flex-wrap:wrap; gap:12px;
+  margin: 8px 0 16px;
+}
+
+/* 기본 버튼 (채운 보라) */
+.actions a.btn {
+  display:inline-flex; align-items:center;
+  padding:10px 16px; border-radius:12px;
+  font-weight:700; line-height:1;
+  border:1px solid var(--brand);
+  background: var(--brand); color:#fff;
+  text-decoration:none;                 /* 밑줄 제거 */
+  transition: background .15s ease, transform .12s ease, box-shadow .12s ease;
+}
+.actions a.btn:hover   { background: var(--brand-dark); transform: translateY(-1px); }
+.actions a.btn:active  { transform: translateY(0); }
+.actions a.btn:focus   { outline:0; box-shadow:0 0 0 3px rgba(110,92,214,.25); }
+
+/* 외곽선 버튼(같은 톤) */
+.actions a.btn.alt {
+  background:#fff; color:var(--brand);
+  border-color: var(--brand);
+}
+.actions a.btn.alt:hover { background: var(--brand-light); }
+
+/* 필요시 작은 캡션 */
+.caption { font-size: 13px; color: var(--vp-c-text-2); }

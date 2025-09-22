@@ -15,6 +15,16 @@ next: /focus/devops
 - **부하모델**: Closed model(동접 n 증가) / Open model(RPS 목표) 병행
 - **관측**: Scouter(APM), Prometheus(시스템), Kibana(로그) 동시 수집
 
+### JMeter 데모 플랜 (다운로드)
+
+<div class="actions">
+  <a class="btn alt"  href="/portfolio/focus/jmeter-guide">실행 가이드</a>
+</div>
+
+<div class="caption">
+회사/고객 정보는 포함하지 않은 <b>공개용 산itized 플랜</b>입니다. 
+실행은 httpbin.org 기반이라 <b>백엔드 없이</b> 재현됩니다.
+</div>
 
 ## APM / DPM
 
