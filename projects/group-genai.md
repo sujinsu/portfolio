@@ -30,7 +30,7 @@ sequenceDiagram
     인증서버 :  검증 및 사용자 조회, 진입점에 따른 별도 처리 (솔루션 - 필요 데이터로 구성한 SAML Response 생성 및 전달 / 포탈 - 화면 리다이렉트)
 ```
 
-💡 **예시 코드**
+💡 **예시 코드 (실제 X)**
 
 ```java
 Response samlResponse = openSamlDecoder.decode(encodedResponse);
@@ -92,7 +92,7 @@ cookieService.saveOrigin(request);
 - 실패 이력은 DB에 저장 후 배치 재처리하도록 설계 
 - Redis + ShedLock 기반 분산 락 처리로 다중 인스턴스 환경에서도 중복 실행 방지
 
-💡 **예시 코드**
+💡 **예시 코드 (실제 X)**
 ```java
 @Scheduled(cron = "0 */5 * * * *")
 @SchedulerLock(name = "reSendTask", lockAtLeastFor = "PT10S")
@@ -120,7 +120,7 @@ public void consume(ConsumerRecord<String, String> record) {
 - Log4j2 + MDC(traceId, IP, App) 구조로 요청 단위 트레이싱 구현
 - DB Appender를 이용해 ERROR 레벨 로그를 별도 테이블에 저장해 장애 추적 효율성 향상
 
-💡 **예시 코드**
+💡 **예시 코드 (실제 X)**
 ```java
 WebClient webClient = WebClient.builder()
     .filter(logFilter())
