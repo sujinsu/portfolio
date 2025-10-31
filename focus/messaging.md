@@ -56,3 +56,6 @@ public class SampleConsumer {
   }
 }
 ```
+
+## 관련 프로젝트
+- [그룹 공동 생성형 AI 플랫폼 (SAML SSO)](/projects/group-genai)

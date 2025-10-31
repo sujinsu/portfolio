@@ -34,3 +34,7 @@ outline: [2,3]
 String relay = request.getParameter("RelayState");
 RelayInfo info = relayCodec.decodeAndVerify(relay);  // 서명 검증 포함
 return redirect(info.returnUrl());
+```
+
+## 관련 프로젝트
+- [그룹 공동 생성형 AI 플랫폼 (SAML SSO)](/projects/group-genai)

@@ -48,3 +48,6 @@ gather_process_list = true
 listen = ":9273"   # :9273/metrics 로 스크랩
 
 ```
+
+## 관련 프로젝트
+- [Bard](/projects/bard)
