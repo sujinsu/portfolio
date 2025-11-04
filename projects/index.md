@@ -2,7 +2,7 @@
 
 <div class="grid">
   <a class="card" href="gateway">
-    <h3>Spring Cloud Gateway 기반 인증/정책 서버</h3>
+    <h3>Gateway & Framework 플랫폼</h3>
     <p>화이트/블랙 IP, 라우팅, Refresh/캐시, JMeter 성능 시나리오</p>
     <span class="tags">Spring Boot · Policy · K8s · JMeter</span>
   </a>
@@ -25,7 +25,7 @@
     <span class="tags">JPA · Monitoring · CI/CD</span>
   </a>
 
-  <a class="card" href="mornitoring">
+  <a class="card" href="monitoring">
     <h3>통합 모니터링</h3>
     <p>CloudWatch 수집, Polestar/VrOps 알람 연계</p>
     <span class="tags">AWS · Monitoring</span>

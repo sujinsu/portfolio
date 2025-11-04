@@ -16,10 +16,10 @@ export default defineConfig({
     sidebar: {
       '/projects/': [
         { text: 'Projects', link: '/projects/' },
-        { text: 'Bard', link: '/projects/bard' },
+        { text: 'Gateway & Framework 플랫폼', link: '/projects/gateway' },
         { text: 'SaaS-Portal', link: '/projects/saas-portal' },
         { text: '데이터 전처리 연구', link: '/projects/data-prep' },
-        { text: 'RHEA 2.0', link: '/projects/rhea' },
+        { text: '통합 모니터링', link: '/projects/monitoring' },
         { text: 'LLM RAG Demo', link: '/projects/rag-demo' },
         { text: '그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트)', link: '/projects/group-genai' }
       ]

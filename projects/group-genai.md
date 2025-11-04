@@ -6,6 +6,17 @@ role: 백엔드 전담
 ---
 
 # 그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트)
+: > Event-driven MSA 구조에서 **Kafka가 중심 버스 역할**을 하고,  
+> **Redis + WebClient가 외부 연동 안정화 레이어**로 작동하는 구조로 설계되었습니다.  
+
+| 항목 | 내용                                                                                        |
+| ---- |-------------------------------------------------------------------------------------------|
+| **프로젝트명** | 그룹 생성형 AI 통합 플랫폼 (가칭, 외부 협업 프로젝트)                                                         |
+| **기술 구성** | Java 17, Spring Boot 3.1, Redis, ShedLock, Kafka, Spring Security, Docker, Kubernetes, Jenkins |
+| **서버 구조** | MSA / 사용자·관리자 프론트엔드, 인증 서버,사용자·관리자 백엔드, 배치 서버, Consumer 서버로 서비스 단위 분리 및 독립 배포 |
+| **주요 업무** | SAML SSO 인증 서버 설계·구현, 외부 SaaS 연동, 비동기 알림 시스템 및 실패건 알림 배치 처리 개발                            |
+| **보안/로깅** | Log4j2 DB Appender로 에러 레벨 로그 DB 저장, MDC(traceId/IP/UserId 등) 기반 요청 단위 추적 구조               |
+| **성과** | 다중 인증 흐름 통합, 알림 장애 대응 효율성 향상                                                              |
 
 ## 1) 인증/흐름
 - **SAML SSO + RelayState 기반 인증 서버** 설계
@@ -115,19 +126,24 @@ public void consume(ConsumerRecord<String, String> record) {
 ```
 
 ## 4) 외부 SaaS 연동/로깅
-- 과제/멤버 이벤트 발생 시 외부 워크스페이스 API 호출 (WebClient 커스텀)
+- 외부 SaaS API 호출 시, WebClient를 공통 유틸로 커스터마이징해 상태/헤더/바디 로깅을 표준화
 - 응답 바디·헤더·상태코드를 필터링하여 표준 로깅 포맷으로 정규화
 - Log4j2 + MDC(traceId, IP, App) 구조로 요청 단위 트레이싱 구현
 - DB Appender를 이용해 ERROR 레벨 로그를 별도 테이블에 저장해 장애 추적 효율성 향상
 
 💡 **예시 코드 (실제 X)**
+- WebClient를 공통 유틸로 커스터마이징
 ```java
-WebClient webClient = WebClient.builder()
-    .filter(logFilter())
-    .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-    .build();
+    @Component
+    public class ExternalApiClient {
+        private final WebClient client = WebClient.builder()
+          .filter(logRequest())
+          .filter(logResponse())
+          .build();
+    }
 ```
 
+- MDC 기반의 요청 단위 추적 로깅과 DB Appender를 도입
 ```xml
 <Appenders>
   <JDBC name="DBAppender" tableName="error_logs">
