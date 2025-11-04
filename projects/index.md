@@ -26,7 +26,7 @@
   </a>
 
   <a class="card" href="mornitoring">
-    <h3>RHEA 2.0 — 통합 모니터링</h3>
+    <h3>통합 모니터링</h3>
     <p>CloudWatch 수집, Polestar/VrOps 알람 연계</p>
     <span class="tags">AWS · Monitoring</span>
   </a>

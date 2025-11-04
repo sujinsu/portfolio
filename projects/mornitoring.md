@@ -1,12 +1,12 @@
 ---
-title: RHEA 2.0 — 통합 모니터링
+title: 통합 모니터링
 tags: [monitoring, aws, cloudwatch, polestar, vrops, api]
 period: 2023-09 ~ 2023-10
 role: 백엔드 전담
 team: 4
 ---
 
-# RHEA 2.0 — 통합 모니터링
+# 통합 모니터링
 
 ## 1) 목표
 서버/K8S/DB/CloudWatch/Process/HTTP 등 **다양한 자원 메트릭을 단일 화면**에서 확인
