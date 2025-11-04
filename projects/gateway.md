@@ -1,12 +1,12 @@
 ﻿---
-title: Bard — Gateway 정책 서버
+title: Spring Cloud Gateway 기반 인증/정책 서버
 tags: [spring-boot, gateway, policy, cache, jmeter, k8s, monitoring]
 period: 2022-07 ~ 2023-01
 role: 백엔드 전담
 team: 8
 ---
 
-# Bard — Gateway 정책 서버
+# Spring Cloud Gateway 기반 인증/정책 서버
 
 ## 1) 개요
 SaaS 플랫폼의 진입점인 **Gateway 정책 서버** 개발.  

@@ -1,14 +1,14 @@
 ﻿# Projects
 
 <div class="grid">
-  <a class="card" href="bard">
-    <h3>Bard — Gateway 정책 서버</h3>
+  <a class="card" href="gateway">
+    <h3>Spring Cloud Gateway 기반 인증/정책 서버</h3>
     <p>화이트/블랙 IP, 라우팅, Refresh/캐시, JMeter 성능 시나리오</p>
     <span class="tags">Spring Boot · Policy · K8s · JMeter</span>
   </a>
 
   <a class="card" href="group-genai">
-    <h3>그룹 공동 생성형 AI 플랫폼</h3>
+    <h3>그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트)</h3>
     <p>SAML SSO, Kafka 비동기 알림, Redis+ShedLock, Jenkins/Helm</p>
     <span class="tags">SAML · Kafka · Redis · DevOps</span>
   </a>
@@ -25,7 +25,7 @@
     <span class="tags">JPA · Monitoring · CI/CD</span>
   </a>
 
-  <a class="card" href="rhea">
+  <a class="card" href="mornitoring">
     <h3>RHEA 2.0 — 통합 모니터링</h3>
     <p>CloudWatch 수집, Polestar/VrOps 알람 연계</p>
     <span class="tags">AWS · Monitoring</span>

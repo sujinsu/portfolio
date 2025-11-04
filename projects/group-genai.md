@@ -1,11 +1,11 @@
 ---
-title: 그룹 공동 생성형 AI 플랫폼
+title: 그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트)
 tags: [spring-boot, java17, redis, shedlock, kafka, saml, security, docker, k8s, jenkins]
 period: 2024-03 ~ 2025-06
 role: 백엔드 전담
 ---
 
-# 그룹 공동 생성형 AI 플랫폼
+# 그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트)
 
 ## 1) 인증/흐름
 - **SAML SSO + RelayState 기반 인증 서버** 설계

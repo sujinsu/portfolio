@@ -5,7 +5,7 @@ outline: [2,3]
 
 # 인증/인가 (SAML SSO · JWT/RBAC)
 
-> **요약**: 그룹 공동 생성형 AI 플랫폼에서 **SAML SSO + 다중 로그인 플로우**를 설계/구현. SP/IdP 전환 가능 구조, RelayState 분기, 보안/신뢰성 개선.
+> **요약**: 그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트)에서 **SAML SSO + 다중 로그인 플로우**를 설계/구현. SP/IdP 전환 가능 구조, RelayState 분기, 보안/신뢰성 개선.
 
 ## 문제 상황
 - 사내·외부 SaaS 혼재, 로그인 흐름이 여러 개 → 단일 인증 허브 필요
@@ -37,4 +37,4 @@ return redirect(info.returnUrl());
 ```
 
 ## 관련 프로젝트
-- [그룹 공동 생성형 AI 플랫폼 (SAML SSO)](/projects/group-genai)
+- [그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트) (SAML SSO)](/projects/group-genai)

@@ -58,4 +58,4 @@ public class SampleConsumer {
 ```
 
 ## 관련 프로젝트
-- [그룹 공동 생성형 AI 플랫폼 (SAML SSO)](/projects/group-genai)
+- [그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트) (SAML SSO)](/projects/group-genai)

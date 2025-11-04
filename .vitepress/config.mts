@@ -21,7 +21,7 @@ export default defineConfig({
         { text: '데이터 전처리 연구', link: '/projects/data-prep' },
         { text: 'RHEA 2.0', link: '/projects/rhea' },
         { text: 'LLM RAG Demo', link: '/projects/rag-demo' },
-        { text: '그룹 공동 생성형 AI', link: '/projects/group-genai' }
+        { text: '그룹 생성형 AI 통합 플랫폼 (대외 협업 프로젝트)', link: '/projects/group-genai' }
       ]
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/sujinsu' }],
