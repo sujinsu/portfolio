@@ -13,8 +13,8 @@ team: 8
 | **프로젝트명** | Gateway & Framework 플랫폼 (가칭)                                                     |
 | **기술 구성** | Java, Spring Boot, MySQL, JMeter, Eureka, Scouter, Telegraf, Jenkins, Kubernetes |
 | **서버 구조** | MSA 환경 - Gateway / 인증 서버 / 정책 서버 / Kafka / Redis / DB로 구성                        |
-| **주요 업무** |  정책 서버 백엔드 개발, 성능 테스트 표준화, 통합 모니터링 구성, CI/CD 자동화                           | |
-| **성과** | 부서 내 JMeter 테스트 표준화 매뉴얼 작성·배포, 모니터링 통합으로 운영 안정성 강화                                  |
+| **주요 업무** | 정책 서버 백엔드 개발, 성능 테스트 표준화, 통합 모니터링 구성, CI/CD 자동화                                  | |
+| **성과** | 부서 내 JMeter 테스트 표준화 매뉴얼 작성·배포, 모니터링 통합으로 운영 안정성 강화                               |
 
 # 주요 업무
 ## 1) Gateway 정책 서버 개발
