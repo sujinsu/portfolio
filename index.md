@@ -3,7 +3,9 @@ layout: home
 hero:
   name: "LEE SUJIN"
   text: "Backend Developer "
-  tagline: " 3.5년차 개발자 \n Java · Spring · Docker · K8s · Auth (SAML SSO) · Kafka/Redis · CICD"
+  tagline: " 3.5년차 Backend Developer   \n 
+    Java · Spring · Docker · K8s · Auth (SAML SSO) · Kafka/Redis · CICD <br>
+    대규모 시스템의 인증·배포·모니터링 아키텍처 경험"
   image:
     src: /avatar.png      
     alt: "SuJin"

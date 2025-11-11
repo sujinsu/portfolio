@@ -1,21 +1,86 @@
-﻿# About
+﻿# 👋 About Me
 
-**㈜케이비데이타시스템 · 신기술사업부 · 백엔드/서버개발 (2022.01 ~ 2025.06)**  
-Java/Spring Boot로 REST API와 인증·메시징·관측·배포를 다뤘습니다. 낯선 환경에서도 빠르게 파고들어 **정리·전파**까지 하는 걸 강점으로 합니다.
+> **Java·Spring 기반 백엔드 개발자**,  
+> 인증·메시징·배포·관측을 중심으로 **안정적인 플랫폼을 설계하고 운영하는 사람**입니다.  
+> 코드는 문제 해결의 수단일 뿐, **지속 가능한 구조와 팀 성장**이 진짜 결과라고 생각합니다.
 
-## 기술 스택
-- **Backend**: Java 17, Spring Boot 3.x, Spring Security, Spring Data JPA
-- **Auth**: SAML SSO, JWT/RBAC
-- **Messaging/Cache**: Kafka, Redis
-- **Ops**: Docker, Kubernetes, Helm, Jenkins, GitLab/ArgoCD
-- **Obs**: Spring Actuator, Scouter, Kibana(Elastic), Telegraf
-- **Data/RAG**: Python, LangChain, Elasticsearch(벡터/Hybrid RRF), Spark
+<br>
 
-## 값하는 일(Work Values)
-- **경험주의**: 빨리 만들고 지표로 검증 → 팀에 **매뉴얼/런북**으로 확산
-- **안정성**: 인증·토픽·키·서킷·락 등 **운영 책임**을 설계단계에서 반영
-- **학습 전파**: 사내 스터디/문서화/데모로 팀 역량 향상
+## 💼 경력 요약
 
-## 교육/자격
-- SSAFY (2021.07~2022.01) — Python/Django/Vue로 영화 추천 서비스 개발
-- **자격**: 정보처리기사, AWS Developer, SQLD, DSAC 3급, 컴활1급, 투자자산운용사, 증권투자권유대행인, 한국사 1급
+**㈜케이비데이타시스템 · 신기술사업부 · 백엔드 개발 (2022.01 ~ 2025.06)**  
+
+그룹 생성 AI 플랫폼, Gateway 정책 서버, 포털, 모니터링 서비스 등  
+**대규모 MSA 환경의 핵심 백엔드**를 설계·개발했습니다.
+
+- Spring Boot 기반 인증/정책 서버, SAML SSO, Kafka 병렬 컨슈머, Redis 분산락 설계
+- Docker/Kubernetes 기반 CI/CD 자동화(Jenkins, Helm, ArgoCD)
+- Scouter + Telegraf + EFK + log4j2 기반 **APM/DPM 통합 모니터링 체계 구축**
+- LangChain + Elasticsearch + Milvus 기반 **RRF 하이브리드 검색 PoC 수행**
+
+
+> 낯선 기술 스택도 빠르게 학습하고 **정리·문서화·전파까지 마무리**하는 걸 가장 잘합니다.
+
+<br>
+
+## 💡 핵심 역량 (Core Competencies)
+
+- **백엔드 기본기**: Java, Spring Boot, JPA/Hibernate, REST API 설계, 예외/에러 핸들링, 테스트(단위/통합)
+- **아키텍처**: MSA, Cloud-Native 설계, API 게이트웨이(Spring Cloud Gateway), 캐시/세션 전략
+- **인증/보안**: Spring Security, RBAC, SAML SSO, RelayState 라우팅/쿠키 정책
+- **배포/플랫폼**: Jenkins, Harbor, Helm, ArgoCD, Kubernetes, Docker
+- **데이터/메시징**: PostgreSQL/MySQL(트랜잭션/인덱스/쿼리 튜닝), Kafka(외부 솔루션 완료 이벤트 수신 상태 동기화 컨슈머), Redis 캐시
+- **검색/AI 연계**: Elasticsearch(BM25 + dense_vector), RRF 기반 하이브리드, LangChain 연동 경험
+- **안정운영/장애대응**: Redis + ShedLock(분산락), Spring Batch 재처리
+- **관측/성능**: Scouter + Telegraf, EFK, MDC Trace, JMeter 시나리오 표준화, log4j2, DB appender
+
+
+<br>
+
+## ⚙️ Work Values
+
+- 🧪 **경험주의 실천** — “빨리 만들어보고 지표로 검증” 후, 팀 내 **표준 매뉴얼·런북화**
+- 🧩 **안정성 중심 설계** — 인증·토픽·락·서킷 등 **운영 관점에서 설계 반영**
+- 📚 **지식 전파** — 사내 스터디, 문서화, 데모 세션으로 팀 역량 향상 기여
+- 🚀 **지속 가능한 코드** — 유지보수·확장성·가독성 우선, “나 아닌 사람도 금방 파악 가능한 구조” 지향
+
+
+<br>
+
+## 🎓 교육 및 자격
+
+
+### 🧑‍💻 **삼성 청년 SW 아카데미 (SSAFY, 2021.07 ~ 2022.01)**
+Python/Django/Vue 기반 영화 추천 서비스 개발
+- TMDB 외부 API 연동, 추천 로직 및 커뮤니티 CRUD 구현
+- JWT 인증 기반 REST API 구조 설계 및 협업/리뷰 주도
+- ERD 설계, 브랜치 협업, 코드리뷰 및 문서화 경험
+
+### 🏕 **한국청소년대구연맹 봉사 동아리 (2017 ~ 2020)**
+청소년 야외활동 안전·생활 지도 (총 17회, 132시간)
+- 인솔 및 안전관리, 체크리스트 표준화, 커뮤니케이션 체계화
+> 현장 대응력·책임감·조직 커뮤니케이션 역량을 쌓았습니다.
+
+### 🎓 **경북대학교 경제통상학과 (주전공) / 컴퓨터학과 (부전공)**
+경제학 전공을 통해 **데이터 기반의 분석과 의사결정 능력**을,  
+컴퓨터학 부전공을 통해 **프로그래밍·자료구조·알고리즘 중심의 문제 해결 역량**을 함께 다졌습니다.
+
+<br>
+
+## 🪪 자격 및 어학
+
+| 분야 | 자격명 | 기관 | 취득일 |
+|------|---------|------|---------|
+| **개발** | 정보처리기사 | 한국산업인력공단 | 2021.08 |
+|  | AWS Certified Developer – Associate | AWS | 2023.06 |
+|  | SQLD | 한국데이터진흥센터 | 2021.10 |
+|  | DSAC 3급 | 한국생산성본부 | 2020.08 |
+| **사무** | 컴퓨터활용능력 1급 | 대한상공회의소 | 2020.07 |
+| **금융** | 투자자산운용사 / 증권투자권유대행인 | 금융투자협회 | 2021 |
+| **기타** | 한국사능력검정 1급 | 국사편찬위원회 | 2020.08 |
+| **어학** | OPIc **Advanced Low (AL)** | ACTFL | 2025.08 |
+
+
+
+
+> 기술보다 **지속 가능한 시스템”과 “학습을 전파하는 개발자**를 목표로 하고 있습니다.
