@@ -9,7 +9,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Projects', link: '/projects/' },
-      { text: 'Blog', link: '/blog/first-post' },
+//       { text: 'Blog', link: '/blog/first-post' },
       { text: 'About', link: '/about' },
       { text: 'Resume', link: '/resume' }
     ],
