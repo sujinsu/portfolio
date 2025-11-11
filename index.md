@@ -22,8 +22,8 @@ features:
     details: SAML SSO, JWT/RBAC 설계·운영
     link: /focus/auth
   - icon: 📬
-    title: 메시징/비동기
-    details: Kafka 병렬 Consumer, 재시도·DLT
+    title: 데이터/메시징
+    details: Kafka Consumer, Redis 캐시/분산락, JPA·MyBatis 데이터 설계
     link: /focus/messaging
   - icon: ⚡
     title: 성능/안정성
